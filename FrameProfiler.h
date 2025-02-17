@@ -32,7 +32,7 @@ public:
         domain = __itt_domain_create(L"FrameProfiler");
 #endif
 #ifdef __APPLE__
-        log = os_log_create("com.vadosesolutions.vadoseearth", OS_LOG_CATEGORY_POINTS_OF_INTEREST);
+        log = os_log_create("com.markscope.frameprofiler", OS_LOG_CATEGORY_POINTS_OF_INTEREST);
         signpost_id = os_signpost_id_generate(log);
         Q_ASSERT(signpost_id != OS_SIGNPOST_ID_INVALID);
         Q_ASSERT(signpost_id != OS_SIGNPOST_ID_NULL);
