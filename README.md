@@ -42,7 +42,7 @@ The `FrameProfiler` class automatically connects to the QML engine's primary win
 ```cpp
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "FrameProfiler.h"
+#include "MarkScope/FrameProfiler.h"
 
 int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
@@ -65,7 +65,7 @@ The `Profiler` class allows you to profile arbitrary tasks. You can manually sta
 #### Manual Profiling:
 
 ```cpp
-#include "Profiler.h"
+#include "MarkScope/Profiler.h"
 
 void performTask() {
     MarkScope::Profiler profiler("MyDomain");
@@ -80,7 +80,7 @@ void performTask() {
 #### Scoped Profiling:
 
 ```cpp
-#include "Profiler.h"
+#include "MarkScope/Profiler.h"
 
 void anotherTask() {
     MarkScope::Profiler profiler("MyDomain");
@@ -96,7 +96,7 @@ void anotherTask() {
 For better identification in profiling tools, you can set the name of the current thread:
 
 ```cpp
-#include "Profiler.h"
+#include "MarkScope/Profiler.h"
 
 int main() {
     MarkScope::Profiler::setThreadName("MainThread");

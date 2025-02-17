@@ -12,9 +12,9 @@ find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick)
 
 add_library(MarkScope INTERFACE
-  MarkScope_global.h
-  Profiler.h
-  FrameProfiler.h
+  MarkScope/MarkScope_global.h
+  MarkScope/Profiler.h
+  MarkScope/FrameProfiler.h
 )
 
 target_include_directories(MarkScope INTERFACE
