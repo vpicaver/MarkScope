@@ -11,20 +11,21 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick)
 
-add_library(MarkScope INTERFACE
+add_library(MarkScope
   MarkScope/MarkScope_global.h
   MarkScope/Profiler.h
   MarkScope/FrameProfiler.h
+  FrameProfiler.cpp
 )
 
-target_include_directories(MarkScope INTERFACE
+target_include_directories(MarkScope PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_link_libraries(MarkScope
-    INTERFACE
+    PUBLIC
     Qt::Core
     Qt::Quick
 )
 
-target_compile_definitions(MarkScope INTERFACE MARKSCOPE_LIBRARY)
+target_compile_definitions(MarkScope PRIVATE MARKSCOPE_LIBRARY)

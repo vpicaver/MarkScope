@@ -7,7 +7,7 @@
 #include <QQuickWindow>
 
 //Our includes
-#include "Profiler.h"
+#include "MarkScope/Profiler.h"
 #include "MarkScope_global.h"
 
 #ifdef ITT_AVAILABLE
