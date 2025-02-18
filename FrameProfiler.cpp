@@ -1,7 +1,6 @@
 #include "MarkScope/FrameProfiler.h"
 
-MarkScope::FrameProfiler::FrameProfiler(QQmlApplicationEngine *engine) :
-    QObject(engine)
+MarkScope::FrameProfiler::FrameProfiler(QQmlApplicationEngine *engine)
 {
 #ifdef ITT_AVAILABLE
     domain = __itt_domain_create(L"FrameProfiler");

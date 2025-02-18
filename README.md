@@ -49,8 +49,8 @@ int main(int argc, char *argv[]) {
     
     QQmlApplicationEngine engine;
     
-    //This needs to be allocated on the heap because it's a child of QQmlApplicationEngine
-    MarkScope::FrameProfiler frameProfiler = new MarkScope::FrameProfiler(&engine);
+    //FrameProfiler isn't a child of engine so it can be allocated on the stack
+    MarkScope::FrameProfiler frameProfiler(&engine);
     
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())
