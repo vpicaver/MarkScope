@@ -14,7 +14,8 @@ MarkScope::FrameProfiler::FrameProfiler(QQmlApplicationEngine *engine)
 
     QObject *rootObject = nullptr;
     if (!engine->rootObjects().isEmpty()) {
-        rootObject = engine->rootObjects().first();
+        auto objects = engine->rootObjects();
+        rootObject = objects.first();
     }
 
     QQuickWindow *window = qobject_cast<QQuickWindow *>(rootObject);
