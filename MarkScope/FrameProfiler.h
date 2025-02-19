@@ -21,7 +21,7 @@
 
 namespace MarkScope {
 
-class MARKSCOPE_EXPORT FrameProfiler : public QObject {
+class FrameProfiler : public QObject {
     Q_OBJECT
 
 public:
