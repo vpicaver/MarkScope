@@ -24,8 +24,8 @@ target_include_directories(MarkScope PUBLIC
 
 target_link_libraries(MarkScope
     PUBLIC
-    Qt::Core
-    Qt::Quick
+    Qt6::Core
+    Qt6::Quick
 )
 
 target_compile_definitions(MarkScope PRIVATE MARKSCOPE_LIBRARY)
